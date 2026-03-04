@@ -1,8 +1,25 @@
 /* Copyright (c) 2020 MTHS All rights reserved
  *
- * Created by: XXX
- * Created on: Sep 2020
- * This program ...
+ * Created by: Murali Kothuri
+ * Created on: Feb 2026
+ * This program is a cookie clicker game
 */
 
-basic.showString('Hello, World!')
+let cookieCount: number = 0
+
+// setup
+basic.clearScreen()
+basic.showIcon(IconNames.Happy)
+
+// Adding cookies when button A pressed
+input.onButtonPressed(Button.A, function () {
+    cookieCount = cookieCount + 1
+    basic.pause(100)
+    basic.showNumber(cookieCount)
+})
+
+// Reset score back to 0
+input.onButtonPressed(Button.B, function () {
+    cookieCount = 0
+    basic.showNumber(cookieCount)
+})
