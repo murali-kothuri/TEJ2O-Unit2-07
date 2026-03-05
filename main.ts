@@ -2,7 +2,7 @@
  *
  * Created by: Murali Kothuri
  * Created on: Feb 2026
- * This program is a cookie clicker game
+ * This program is a cookie clicker game.
 */
 
 let cookieCount: number = 0
@@ -11,14 +11,14 @@ let cookieCount: number = 0
 basic.clearScreen()
 basic.showIcon(IconNames.Happy)
 
-// Adding cookies when button A pressed
+// adding cookies when button A pressed
 input.onButtonPressed(Button.A, function () {
     cookieCount = cookieCount + 1
     basic.pause(100)
     basic.showNumber(cookieCount)
 })
 
-// Reset score back to 0
+// reset score back to 0
 input.onButtonPressed(Button.B, function () {
     cookieCount = 0
     basic.showNumber(cookieCount)
